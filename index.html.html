@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>le-copa-de-babax</title>
+
+<style>
+body{
+  background:#0b0f17;
+  color:#e5e7eb;
+  font-family:Arial;
+}
+
+.container{
+  max-width:900px;
+  margin:40px auto;
+  background:#111827;
+  padding:25px;
+  border-radius:12px;
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start; /* sağ taraf sabit */
+}
+
+.left{
+  width:60%;
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+
+.right{width:35%;}
+
+h2{margin-bottom:20px;}
+
+.row{
+  display:flex;
+  align-items:center;
+  padding:12px 0;
+  border-bottom:1px solid #1f2937;
+}
+
+.name{flex:1;}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- SOL TARAF -->
+<div class="left">
+
+<h2>🏆 Madalya Tablosu — le-copa-de-babax</h2>
+
+<div class="row">
+<div class="name">İbo (Munchester United)</div>
+<div>🥇13 🥈4 🥉5</div>
+</div>
+
+<div class="row">
+<div class="name">Tuna (Barcelona)</div>
+<div>🥇8 🥈7 🥉5</div>
+</div>
+
+<div class="row">
+<div class="name">Alp Eren (Araba FK)</div>
+<div>🥇2 🥈6 🥉7</div>
+</div>
+
+<div class="row">
+<div class="name">Ali Kemal (Kemal FC)</div>
+<div>🥇0 🥈5 🥉3</div>
+</div>
+
+<!-- 👑 GOL KRALLIĞI -->
+<div>
+<h2>👑 Gol Krallığı</h2>
+
+<p>🥇 En Nesyri    -  0 Gol</p>
+<p>🥈 Yuma Suziki  -  0 Gol</p>
+<p>🥉 Eric Cantona -  0 Gol</p>
+
+</div>
+
+<!-- 🎡 ÇARK -->
+<div style="text-align:center;">
+<h2>🎡 Eşleşme Çarkı</h2>
+
+<button onclick="cevir()" style="
+padding:12px 20px;
+background:#22c55e;
+border:none;
+border-radius:10px;
+color:black;
+font-weight:bold;
+cursor:pointer;
+">
+Çarkı Çevir
+</button>
+
+<h3 id="sonuc" style="margin-top:15px;">Eşleşme bekleniyor...</h3>
+</div>
+
+</div>
+
+<!-- SAĞ TARAF -->
+<div class="right">
+
+<h2>Son Şampiyonlar</h2>
+
+<p>2065 — Trabzonspor (Manu)</p>
+<p>2066 — FC Barcelona</p>
+<p>2067 — FC Barcelona</p>
+<p>2068 — Trabzonspor (Manu)</p>
+<p>2069 — FC Barcelona</p>
+<p>2070 — Trabzonspor (Manchester United)</p>
+<p>2071 — Trabzonspor (Manchester United)</p>
+<p>2072 — Trabzonspor (Manchester United)</p>
+<p>2073 — Trabzonspor (Manchester United)</p>
+<p>2074 — Trabzonspor (Manchester United)</p>
+<p>2075 — Trabzonspor (Manchester United)</p>
+<p>2076 — FC Barcelona</p>
+<p>2077 — Araba FK</p>
+<p>2078 — FC Barcelona</p>
+<p>2079 — Araba FK</p>
+<p>2080 — Trabzonspor (Manchester United)</p>
+<p>2081 — FC Barcelona</p>
+<p>2082 — FC Barcelona</p>
+<p>2083 — Manchester United</p>
+<p>2084 — Manchester United</p>
+<p>2085 — FC Barcelona</p>
+<p>2086 — Manchester United</p>
+<p>2087 — Manchester United</p>
+
+</div>
+
+</div>
+
+<script>
+function cevir(){
+
+let takimlar = [
+"Munchester United",
+"Barcelona",
+"Araba FK",
+"Kemal FC"
+];
+
+takimlar.sort(()=>Math.random()-0.5);
+
+document.getElementById("sonuc").innerHTML =
+takimlar[0] + " 🆚 " + takimlar[1] +
+"<br>" +
+takimlar[2] + " 🆚 " + takimlar[3];
+
+}
+</script>
+
+</body>
+</html>
+
